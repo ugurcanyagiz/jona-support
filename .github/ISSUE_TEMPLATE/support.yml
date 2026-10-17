@@ -1,0 +1,32 @@
+name: JONA support
+description: Ask a question or report a JONA problem.
+title: "[Support] "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        This issue is PUBLIC. Do not include passwords, access tokens, personal screenshots, private messages or diagnostic files. Describe the issue without sensitive information.
+  - type: input
+    id: version
+    attributes:
+      label: JONA and iOS versions
+      placeholder: "JONA 0.17, iOS 27.0.1"
+  - type: input
+    id: vehicle
+    attributes:
+      label: Vehicle and connection
+      placeholder: "Make / model / year; wired or wireless"
+  - type: textarea
+    id: problem
+    attributes:
+      label: What happened?
+      description: Include steps, expected behavior and actual behavior without personal information.
+    validations:
+      required: true
+  - type: checkboxes
+    id: privacy
+    attributes:
+      label: Public information
+      options:
+        - label: I understand this request is public and have not included sensitive information.
+          required: true
